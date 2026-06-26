@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 from fastapi import FastAPI, Request
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, RedirectResponse
 
 from app import __version__
 from app.config import get_settings
@@ -31,7 +31,11 @@ def create_app() -> FastAPI:
 
     app.include_router(investigate_router)
 
-    @app.get("/", response_model=HealthResponse, tags=["health"])
+    @app.get("/", include_in_schema=False)
+    async def root() -> RedirectResponse:
+        """Friendly landing — send visitors to the API docs."""
+        return RedirectResponse(url="/docs", status_code=307)
+
     @app.get("/health", response_model=HealthResponse, tags=["health"])
     async def health() -> HealthResponse:
         return HealthResponse(
