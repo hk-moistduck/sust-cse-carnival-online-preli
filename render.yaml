@@ -1,0 +1,19 @@
+# Render Blueprint — one-click deploy.
+# To use: in Render dashboard → "New" → "Blueprint" → point at this repo.
+# Or just create a Web Service manually with the settings below.
+
+services:
+  - type: web
+    name: supportops-investigator
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: LOG_LEVEL
+        value: INFO
+      - key: PORT
+        value: "8000"
