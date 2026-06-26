@@ -1,0 +1,17 @@
+{
+  "ticket_id": "TKT-2001",
+  "complaint": "Someone called me pretending to be from support and asked for my OTP. I shared the OTP and now I see an unauthorized transaction of 8000 taka.",
+  "language": "en",
+  "channel": "call_center",
+  "user_type": "customer",
+  "transaction_history": [
+    {
+      "transaction_id": "TXN-2001",
+      "amount": 8000,
+      "counterparty": "01999888777",
+      "status": "completed",
+      "timestamp": "2026-06-26T11:30:00+00:00",
+      "type": "transfer"
+    }
+  ]
+}

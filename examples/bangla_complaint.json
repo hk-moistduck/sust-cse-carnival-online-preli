@@ -1,0 +1,17 @@
+{
+  "ticket_id": "TKT-4001",
+  "complaint": "আমি ভুল নম্বরে ২০০০ টাকা পাঠিয়েছি, এখনো ফেরত পাইনি।",
+  "language": "bn",
+  "channel": "in_app_chat",
+  "user_type": "customer",
+  "transaction_history": [
+    {
+      "transaction_id": "TXN-4001",
+      "amount": 2000,
+      "counterparty": "01711223344",
+      "status": "completed",
+      "timestamp": "2026-06-26T13:30:00+00:00",
+      "type": "transfer"
+    }
+  ]
+}

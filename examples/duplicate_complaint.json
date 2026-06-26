@@ -1,0 +1,25 @@
+{
+  "ticket_id": "TKT-3001",
+  "complaint": "I was charged twice for the same order. Duplicate payment of 1200 taka.",
+  "language": "en",
+  "channel": "in_app_chat",
+  "user_type": "customer",
+  "transaction_history": [
+    {
+      "transaction_id": "TXN-3001",
+      "amount": 1200,
+      "counterparty": "shop_online",
+      "status": "completed",
+      "timestamp": "2026-06-26T14:00:00+00:00",
+      "type": "payment"
+    },
+    {
+      "transaction_id": "TXN-3002",
+      "amount": 1200,
+      "counterparty": "shop_online",
+      "status": "completed",
+      "timestamp": "2026-06-26T14:00:45+00:00",
+      "type": "payment"
+    }
+  ]
+}

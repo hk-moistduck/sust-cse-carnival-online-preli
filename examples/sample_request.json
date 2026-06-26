@@ -1,0 +1,25 @@
+{
+  "ticket_id": "TKT-1001",
+  "complaint": "I sent 5000 taka to 01711223344 about 10 minutes ago but it went to the wrong number. Please help me recover it.",
+  "language": "en",
+  "channel": "in_app_chat",
+  "user_type": "customer",
+  "transaction_history": [
+    {
+      "transaction_id": "TXN-1001",
+      "amount": 5000,
+      "counterparty": "01711223344",
+      "status": "completed",
+      "timestamp": "2026-06-26T10:15:00+00:00",
+      "type": "transfer"
+    },
+    {
+      "transaction_id": "TXN-1002",
+      "amount": 250,
+      "counterparty": "01711999999",
+      "status": "failed",
+      "timestamp": "2026-06-26T09:00:00+00:00",
+      "type": "payment"
+    }
+  ]
+}
