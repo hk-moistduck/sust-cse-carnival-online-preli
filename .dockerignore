@@ -1,3 +1,10 @@
+# Files NOT to copy into the Docker image.
+# The Dockerfile itself controls what to COPY in.
+# We only exclude:
+#   - secrets (env, git)
+#   - dev/test caches
+#   - IDE metadata
+# README.md and tests ARE copied because the Dockerfile wants them.
 __pycache__
 *.pyc
 *.pyo
@@ -10,9 +17,7 @@ venv
 .pytest_cache
 .coverage
 htmlcov
-tests
 *.log
 .idea
 .vscode
-README.md
 docs

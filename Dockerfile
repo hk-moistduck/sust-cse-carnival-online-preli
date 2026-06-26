@@ -12,11 +12,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         curl \
     && rm -rf /var/lib/apt/lists/*
 
+# Install Python deps first (cache-friendly: changes only when requirements.txt changes)
 COPY requirements.txt ./
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
+# Copy application code
 COPY app ./app
-COPY tests ./tests
 COPY examples ./examples
 COPY README.md ./
 COPY pyproject.toml ./
