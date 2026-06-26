@@ -10,7 +10,7 @@
       "amount": 1200,
       "counterparty": "shop_online",
       "status": "completed",
-      "timestamp": "2026-06-26T14:00:00+00:00",
+      "timestamp": "2026-06-26T15:16:00+00:00",
       "type": "payment"
     },
     {
@@ -18,7 +18,7 @@
       "amount": 1200,
       "counterparty": "shop_online",
       "status": "completed",
-      "timestamp": "2026-06-26T14:00:45+00:00",
+      "timestamp": "2026-06-26T15:16:45+00:00",
       "type": "payment"
     }
   ]

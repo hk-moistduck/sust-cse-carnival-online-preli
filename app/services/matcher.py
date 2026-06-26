@@ -443,8 +443,12 @@ def find_relevant_transaction(
     # Ambiguity check (per SAMPLE-08): if multiple candidates have exact
     # amount match AND the complaint doesn't disambiguate them via recipient
     # hint or merchant hint, refuse to pick one.
+    # Exception: if duplicates were detected, the duplicate pair is
+    # inherently disambiguated by time order — promote second of pair
+    # without flagging as ambiguous.
     if (
         best is not None
+        and not duplicates
         and len(candidates) >= 2
         and best.amount_match == "exact"
         and candidates[1].amount_match == "exact"
